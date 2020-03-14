@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 //------------------PLAYING WITH URL: --------------------------
 //Current URL. WHERE user sees: resource<view<master.blade.php
 //-----------------------main PAGE---------------------------
-Route::get('/', ['uses'=>'master@index','as'=>'index']);
+Route::get('/', 'master@index');
 
 
 //ACCESS MY ALL INFORMATION INSIDE DB

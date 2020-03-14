@@ -8,7 +8,13 @@
 @section('component')
 <h1>About Us Page</h1>
 @endsection
-<!-- Info received from controller -->
 
-<p>First Name: {{$firstName}}; </p>
-<p>Last Name: {{$lastName}}; </p>
+
+
+
+
+
+
+<!-- Info received from controller -->
+<!-- <p>First Name: {{$firstName}}; </p>
+<p>Last Name: {{$lastName}}; </p> -->
