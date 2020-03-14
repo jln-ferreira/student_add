@@ -8,17 +8,16 @@
 
 	<!-- INCLUDE BOOTSTRAP and JQUERY -->
 	@include('toolsUsed')
-	<!-- END BOOTSTRAP and JQUERY -->
+
 
 </head>
 <body>
 	<!-- MY HEADER -->
 	@include('header')
-	<!-- END HEADER -->
 
 
 	<!-- COMMING FROM MASTER -->
-	<!-- INPUT -->
+	<!-- INPUT OF STUDENTS (name, last name, email, phone number) -->
 	@yield('inputs_students')
 
 

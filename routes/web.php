@@ -20,7 +20,7 @@ Route::get('/', 'master@index');
 
 
 //ACCESS MY ALL INFORMATION INSIDE DB
-Route::get('/about', ['uses'=>'aboutController@about','as'=>'about']);
+Route::get('/new', 'controllerNewCustomers@newCustomer');
 
 
 

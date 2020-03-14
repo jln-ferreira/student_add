@@ -20,8 +20,8 @@
         	<input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter email">
         </div>
     	<div class="form-group">
-        	<label for="inputPassword">Password</label>
-        	<input type="password" class="form-control" id="inputPassword" placeholder="Password">
+        	<label for="unputPhone">Phone Number</label>
+        	<input type="Number" class="form-control" id="unputPhone" placeholder="Enter Phone number">
     	</div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
