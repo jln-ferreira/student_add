@@ -2,26 +2,26 @@
 @extends('layout')
 
  <!--start to do an input -->
-@section('inputs_students')
+@section('info_student')
 
 <div class="container">
   <div class=".col-lg-6">
-    <form action="POST">
+    <form method="POST" action="{{ url('/') }}" >
     	<div class="form-group">
         	<label for="inputFirstName">First Name</label>
-        	<input type="text" class="form-control" id="inputFirstName" placeholder="Enter first name">
+        	<input type="text" class="form-control" id="inputFirstName" name="inputFirstName" placeholder="Enter first name">
         </div>
         <div class="form-group">
         	<label for="inputLastname">Last Name</label>
-        	<input type="text" class="form-control" id="inputLastname" placeholder="Enter Last name">
+        	<input type="text" class="form-control" id="inputLastname" name="inputLastname" placeholder="Enter Last name">
         </div>
     	<div class="form-group">
         	<label for="inputEmail">Email address</label>
-        	<input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter email">
+        	<input type="email" class="form-control" id="inputEmail" name="inputEmail" aria-describedby="emailHelp" placeholder="Enter email">
         </div>
     	<div class="form-group">
-        	<label for="unputPhone">Phone Number</label>
-        	<input type="Number" class="form-control" id="unputPhone" placeholder="Enter Phone number">
+        	<label for="inputPhone">Phone Number</label>
+        	<input type="Number" class="form-control" id="inputPhone" name="inputPhone" placeholder="Enter Phone number">
     	</div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>

@@ -18,9 +18,10 @@ use Illuminate\Support\Facades\Route;
 //-----------------------main PAGE---------------------------
 Route::get('/', 'master@index');
 
-
 //ACCESS MY ALL INFORMATION INSIDE DB
 Route::get('/new', 'controllerNewCustomers@newCustomer');
+
+
 
 
 

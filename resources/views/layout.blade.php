@@ -17,8 +17,8 @@
 
 
 	<!-- COMMING FROM MASTER -->
-	<!-- INPUT OF STUDENTS (name, last name, email, phone number) -->
-	@yield('inputs_students')
+	<!-- info_student (name, last name, email, phone number) -->
+	@yield('info_student')
 
 
 	
