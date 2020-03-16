@@ -2,6 +2,8 @@
 @extends('layout')
 
  <!--start to do an input -->
+@section('info_student')
+
 <div class="container">
   <div class=".col-lg-6">
     <form method="POST" action="newStudent" > <!-- gonna send to other page with all information. see on Route::post -->
