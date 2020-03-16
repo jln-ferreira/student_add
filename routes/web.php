@@ -16,11 +16,16 @@ use Illuminate\Support\Facades\Route;
 //------------------PLAYING WITH URL: --------------------------
 //Current URL. WHERE user sees: resource<view<master.blade.php
 //-----------------------main PAGE---------------------------
+// GONNA ACCESS INPUT NEW STUDENT
 Route::get('/', 'master@index');
 
-//ACCESS MY ALL INFORMATION INSIDE DB
-Route::get('/new', 'controllerNewCustomers@newCustomer');
 
+//-----------------------show STUDENTS----------------------
+//ACCESS MY ALL INFORMATION INSIDE DB
+Route::get('/customers', 'controllerListCustomers@newCustomer');
+
+//ACCESS ESPECIFIC STUDENT
+Route::get('/customers/{id}', 'controllerListCustomers@showSingleStudent');
 
 
 
