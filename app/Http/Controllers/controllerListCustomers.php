@@ -19,7 +19,7 @@ class controllerListCustomers extends Controller
     	$students = student::all();
 
     	//fetch all information inside mysql
-    	//$students = DB::table('class')->get();
+    	//$students = DB::table('students')->get();
 
 
     	return view('showCustomer', compact('students'));

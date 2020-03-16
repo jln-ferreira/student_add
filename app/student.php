@@ -8,5 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class student extends Model
 {
-    //
+	//will not count timestamp (createdAt)
+	public $timestamps = false;
+	//this is what is fillable
+    protected $fillable = ['firstName','lastName', 'Email', 'phoneNumber'];
 }

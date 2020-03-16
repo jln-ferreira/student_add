@@ -34,9 +34,9 @@
 			        <td>{{ $student->phoneNumber }}</td>
 			        <td>{{ $student->createdAt }}</td>
 			        <td>
-						<a href='' class='btn btn-danger customer_Delete'>delete</a>
+						<a href="" class='btn btn-danger customer_Delete'>delete</a>
 			        </td>
-			    </tr>       
+			    </tr>    
 			@endforeach
 
 			<!-- IF there is a number on URL after NEW (new/1), this gonna show -->

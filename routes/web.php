@@ -19,6 +19,9 @@ use Illuminate\Support\Facades\Route;
 // GONNA ACCESS INPUT NEW STUDENT
 Route::get('/', 'master@index');
 
+//ADD NEW STUDENT
+Route::post('/newStudent', 'master@addStudent');
+
 
 //-----------------------show STUDENTS----------------------
 //ACCESS MY ALL INFORMATION INSIDE DB
