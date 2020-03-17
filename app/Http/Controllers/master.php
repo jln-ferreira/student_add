@@ -27,5 +27,7 @@ class master extends Controller
     	]);
     	//save mySQL
     	$student->save();
+        // go back to the same page '/'
+        return back();
     }
 }
