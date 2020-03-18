@@ -7,7 +7,6 @@
 <div class="container">
   <div class=".col-lg-6">
 
-
 <!-- SUCESS MESSAGE AFTER ADD STUDENT INTO DATABASE -->
 @if(session()->has('message_AddStudent'))
     <div class="alert alert-success">
@@ -18,6 +17,12 @@
 
 	<!-- SUBMIT FORM -> STUDENTS -->
 	@if(!isset($studentArr))
+
+	 <!-- BUTTON TO CHANGE pages -->
+  	<div class=".col-lg-12" style="text-align: right;">
+  		<a href="customers" class="btn btn-success">View Students</a>
+  	</div>
+
     <form method="POST" action="newStudent" > <!-- gonna send to other page with all information. see on Route::post -->
     	@csrf
     	<div class="form-group">
@@ -64,7 +69,6 @@
         <button type="edit" class="btn btn-info">edit</button>
     </form>
 	@endif
-
   </div>
 </div>
 @stop

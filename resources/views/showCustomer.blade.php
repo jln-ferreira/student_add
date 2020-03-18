@@ -46,11 +46,10 @@
 			        <td>{{ $student->createdAt }}</td>
 			        <td>
 			        	<a href="customers/{{$student->id}}/edit" class='btn btn-info'>edit</a>
-						<a href="" class='btn btn-danger'>delete</a>
+						<a href="customers/{{$student->id}}/DeleteStudent" class='btn btn-danger'>delete</a>
 			        </td>
 			    </tr>    
 			@endforeach
-
 			<!-- IF there is a number on URL after NEW (new/1), this gonna show -->
 			@else
 				 <tr>

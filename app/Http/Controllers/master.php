@@ -44,4 +44,13 @@ class master extends Controller
         //$studentId->update($request->all());
         return redirect('customers')->with('message_EditedStudent', 'Student edited!');
     }
+
+    //DELETE STUDENTS
+    public function deleteStudent($studentId){
+
+        student::find($studentId)->delete();
+
+        return back();
+    }
+
 }

@@ -23,6 +23,8 @@ Route::get('/', 'master@index');
 Route::post('/newStudent', 'master@addStudent');
 //UPDATE STUDENTS
 Route::patch('/customers/{studentId}/UpdateStudent', 'master@updateStudent');
+//DELETE STUDENTS
+Route::get('/customers/{studentId}/DeleteStudent', 'master@deleteStudent');
 
 
 //-----------------------show STUDENTS----------------------
