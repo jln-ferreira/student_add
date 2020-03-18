@@ -41,23 +41,25 @@
 
 	<!-- EDIT FORM -> STUDENTS -->
     @else
-    <form method="POST" action="" > <!-- gonna send to other page with all information. see on Route::post -->
-    	@csrf
+    <form method="POST" action="UpdateStudent" > <!-- gonna send to other page with all information. see on Route::post -->
+		@csrf
+    	{{ method_field('PATCH') }} <!-- UPDATE -->
+
     	<div class="form-group">
         	<label for="inputFirstName">First Name</label>
-        	<input type="text" class="form-control" id="inputFirstName" name="inputFirstName" placeholder="Enter first name" value="{{$studentArr[0]}}" required>
+        	<input type="text" class="form-control" id="inputFirstName" name="inputFirstName" placeholder="Enter first name" value="{{$studentArr[1]}}" required>
         </div>
         <div class="form-group">
         	<label for="inputLastname">Last Name</label>
-        	<input type="text" class="form-control" id="inputLastname" name="inputLastname" placeholder="Enter Last name" value="{{$studentArr[1]}}"  required>
+        	<input type="text" class="form-control" id="inputLastname" name="inputLastname" placeholder="Enter Last name" value="{{$studentArr[2]}}"  required>
         </div>
     	<div class="form-group">
         	<label for="inputEmail">Email address</label>
-        	<input type="email" class="form-control" id="inputEmail" name="inputEmail" aria-describedby="emailHelp" placeholder="Enter email" value="{{$studentArr[2]}}"  required>
+        	<input type="email" class="form-control" id="inputEmail" name="inputEmail" aria-describedby="emailHelp" placeholder="Enter email" value="{{$studentArr[3]}}"  required>
         </div>
     	<div class="form-group">
         	<label for="inputPhone">Phone Number</label>
-        	<input type="Number" class="form-control" id="inputPhone" name="inputPhone" placeholder="Enter Phone number" value="{{$studentArr[3]}}"  required>
+        	<input type="Number" class="form-control" id="inputPhone" name="inputPhone" placeholder="Enter Phone number" value="{{$studentArr[4]}}"  required>
     	</div>
         <button type="edit" class="btn btn-info">edit</button>
     </form>

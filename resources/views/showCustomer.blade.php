@@ -5,6 +5,17 @@
  <!--start to SHOW every information at mySQL -->
 @section('info_student')
 <div class="container">
+
+	
+	<!-- SUCESS MESSAGE AFTER EDITED STUDENT INTO DATABASE -->
+	@if(session()->has('message_EditedStudent'))
+	    <div class="alert alert-success">
+	        {{ session()->get('message_EditedStudent') }}
+	    </div>
+	@endif
+	<!-- END SUCCESS MESSAGE -->
+
+
 	<div class=".col-lg-6">
 		<table class="table">
 		  	<thead>

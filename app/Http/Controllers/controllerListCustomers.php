@@ -32,18 +32,18 @@ class controllerListCustomers extends Controller
     	return view('showCustomer',compact('student'));
     }
 
-    //EDIT STUDENTS
+    //EDIT STUDENTS (SEND INFORMATION TO FORMS)
     public function editEtudent(student $studentId){
 
+		$id    		  = $studentId->id;
     	$firstName    = $studentId->firstName;
 		$lastName     = $studentId->lastName;
 		$Email        = $studentId->Email;
 		$phoneNumber  = $studentId->phoneNumber;
 
-		$studentArr = [$firstName, $lastName, $Email, $phoneNumber];
+		$studentArr = [$id, $firstName, $lastName, $Email, $phoneNumber];
 
-    	return view('master', compact('studentArr')); 
-
+    	return view('master', compact('studentArr'), compact($studentId)); 
     }
 }
 

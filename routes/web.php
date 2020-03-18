@@ -21,6 +21,8 @@ Route::get('/', 'master@index');
 
 //ADD NEW STUDENT (cannot access URL)
 Route::post('/newStudent', 'master@addStudent');
+//UPDATE STUDENTS
+Route::patch('/customers/{studentId}/UpdateStudent', 'master@updateStudent');
 
 
 //-----------------------show STUDENTS----------------------
@@ -32,7 +34,6 @@ Route::get('/customers/{id}', 'controllerListCustomers@showSingleStudent');
 
 //EDIT ESTUDENTS ==> button goes to index
 Route::get('/customers/{studentId}/edit', 'controllerListCustomers@editEtudent');
-
 
 
 

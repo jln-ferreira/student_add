@@ -23,11 +23,25 @@ class master extends Controller
 			'lastName'	  => $request->get('inputLastname'),
 			'Email'		  => $request->get('inputEmail'),
 			'phoneNumber' => $request->get('inputPhone')
-			// 'createdAt'	  => $request->get();
+			//'createdAt'	  => $request->get();
     	]);
     	//save mySQL
     	$student->save();
         // go back to the same page '/' and insert a message Student added
         return back()->with('message_AddStudent', 'Student added!');
+    }
+
+    //UPDATE STUDENTS
+    public function updateStudent(Request $request, student $studentId){
+
+        //use inputs to update mySQL
+        $studentId->firstName = $request->input('inputFirstName');
+        $studentId->lastName = $request->input('inputLastname');
+        $studentId->Email = $request->input('inputEmail');
+        $studentId->phoneNumber = $request->input('inputPhone');
+        $studentId->save();
+
+        //$studentId->update($request->all());
+        return redirect('customers')->with('message_EditedStudent', 'Student edited!');
     }
 }
