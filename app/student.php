@@ -10,6 +10,6 @@ class student extends Model
 {
 	//will not count timestamp (createdAt)
 	public $timestamps = false;
-	//this is what is fillable
+	//this is what is fillable`2
     protected $fillable = ['firstName','lastName', 'Email', 'phoneNumber'];
 }

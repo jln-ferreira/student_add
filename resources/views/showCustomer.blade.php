@@ -34,7 +34,8 @@
 			        <td>{{ $student->phoneNumber }}</td>
 			        <td>{{ $student->createdAt }}</td>
 			        <td>
-						<a href="" class='btn btn-danger customer_Delete'>delete</a>
+			        	<a href="customers/{{$student->id}}/edit" class='btn btn-info'>edit</a>
+						<a href="" class='btn btn-danger'>delete</a>
 			        </td>
 			    </tr>    
 			@endforeach

@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 // GONNA ACCESS INPUT NEW STUDENT
 Route::get('/', 'master@index');
 
-//ADD NEW STUDENT
+//ADD NEW STUDENT (cannot access URL)
 Route::post('/newStudent', 'master@addStudent');
 
 
@@ -30,6 +30,8 @@ Route::get('/customers', 'controllerListCustomers@newCustomer');
 //ACCESS ESPECIFIC STUDENT
 Route::get('/customers/{id}', 'controllerListCustomers@showSingleStudent');
 
+//EDIT ESTUDENTS ==> button goes to index
+Route::get('/customers/{studentId}/edit', 'controllerListCustomers@editEtudent');
 
 
 
