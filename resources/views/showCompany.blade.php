@@ -2,7 +2,7 @@
 @extends('layout')
 
 <!-- HEADER -->
-@section('header', 'Student')
+@section('header', 'Company')
 
  <!--start to SHOW every information at mySQL -->
 @section('info_Body')
@@ -12,10 +12,10 @@
 		  	<thead>
 			  	<tr>
 					<th>Id</th>
-					<th>First Name</th>
-					<th>Last Name</th>
+					<th>Name</th>
+					<th>Address</th>
 					<th>Phone</th>
-					<th>Phone Number</th>
+					<th>Sector</th>
 					<th>Created At</th>
 			    	<th></th>
 			    </tr>
@@ -24,32 +24,32 @@
 			
 			<!-- if there is value in $student, came from controllerNewCustomer -->
 			<!-- if i insert  a number on URL -->
-			@if(!isset($student))
+			<!-- @if(!isset($student)) -->
 
 			<!-- THIS SESSION GONNA SHOW ALL INFORMATION IN MY DB -->
-			@foreach ($students as $student)
+			@foreach ($companies as $company)
 			    <tr>
-					<td>{{ $student->id }}</td>
-			        <td>{{ $student->firstName }}</td>
-			        <td>{{ $student->lastName }}</td>
-			        <td>{{ $student->Email }}</td>
-			        <td>{{ $student->phoneNumber }}</td>
-			        <td>{{ $student->createdAt }}</td>
+					<td>{{ $company->id }}</td>
+			        <td>{{ $company->name }}</td>
+			        <td>{{ $company->address }}</td>
+			        <td>{{ $company->phone }}</td>
+			        <td>{{ $company->sector }}</td>
+			        <td>{{ $company->createdAt }}</td>
 			        <td>
-			        	<a href="customers/{{$student->id}}/edit" class='btn btn-info'>edit</a>
-						<a href="customers/{{$student->id}}/DeleteStudent" class='btn btn-danger'>delete</a>
+			        	<a href="companies/{{$company->id}}/edit" class='btn btn-info'>edit</a>
+						<a href="companies/{{$company->id}}/DeleteStudent" class='btn btn-danger'>delete</a>
 			        </td>
 			    </tr>    
 			@endforeach
 			<!-- IF there is a number on URL after NEW (new/1), this gonna show -->
 			@else
 				 <tr>
-					<td>{{ $student->id }}</td>
-			        <td>{{ $student->firstName }}</td>
-			        <td>{{ $student->lastName }}</td>
-			        <td>{{ $student->Email }}</td>
-			        <td>{{ $student->phoneNumber }}</td>
-			        <td>{{ $student->createdAt }}</td>
+					<td>{{ $company->id }}</td>
+			        <td>{{ $company->name }}</td>
+			        <td>{{ $company->address }}</td>
+			        <td>{{ $company->phone }}</td>
+			        <td>{{ $company->sector }}</td>
+			        <td>{{ $company->createdAt }}</td>
 			        <td></td>
 			    </tr>  
 			@endif

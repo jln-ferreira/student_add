@@ -16,9 +16,14 @@ use Illuminate\Support\Facades\Route;
 //------------------PLAYING WITH URL: --------------------------
 //Current URL. WHERE user sees: resource<view<master.blade.php
 //-----------------------main PAGE---------------------------
-// GONNA ACCESS INPUT NEW STUDENT
+//GONNA ACCESS INPUT NEW STUDENT
 Route::get('/', 'master@index');
+//GONNA ACCESS INPUT NEW COMPANY
+Route::get('/inputCompany', 'controllerCompanyMaster@index');
 
+
+//----------------------------CRUD------------------------
+//-----Student
 //ADD NEW STUDENT (cannot access URL)
 Route::post('/newStudent', 'master@addStudent');
 //UPDATE STUDENTS
@@ -26,9 +31,17 @@ Route::patch('/customers/{studentId}/UpdateStudent', 'master@updateStudent');
 //DELETE STUDENTS
 Route::get('/customers/{studentId}/DeleteStudent', 'master@deleteStudent');
 
+//-----Company
+//ADD NEW COMPANY (cannot access URL)
+Route::post('/newCompany', 'controllerCompanyMaster@addCompany');
+//UPDATE COMPANY
+Route::patch('/companies/{companyId}/updateCompany', 'controllerCompanyMaster@updateCompany');
+//DELETE COMPANY
+Route::get('/companies/{companyId}/dseleteCompany', 'master@deleteStudent');
+
 
 //-----------------------show STUDENTS----------------------
-//ACCESS MY ALL INFORMATION INSIDE DB
+//ACCESS MY ALL INFORMATION INSIDE DB STUDENTS
 Route::get('/customers', 'controllerListCustomers@newCustomer');
 
 //ACCESS ESPECIFIC STUDENT
@@ -36,6 +49,13 @@ Route::get('/customers/{id}', 'controllerListCustomers@showSingleStudent');
 
 //EDIT ESTUDENTS ==> button goes to index
 Route::get('/customers/{studentId}/edit', 'controllerListCustomers@editEtudent');
+
+
+//-----------------------show COMPANIES----------------------
+//ACCESS MY ALL INFORMATION INSIDE DB COMPANY
+Route::get('/companies', 'controllerListCompanies@newCompany');
+//EDIT ESTUDENTS ==> button goes to index
+Route::get('/companies/{companyId}/edit', 'controllerListCompanies@editCompany');
 
 
 

@@ -33,17 +33,21 @@ class controllerListCustomers extends Controller
     }
 
     //EDIT STUDENTS (SEND INFORMATION TO FORMS)
-    public function editEtudent(student $studentId){
+    public function editEtudent($studentId){
 
-		$id    		  = $studentId->id;
-    	$firstName    = $studentId->firstName;
-		$lastName     = $studentId->lastName;
-		$Email        = $studentId->Email;
-		$phoneNumber  = $studentId->phoneNumber;
 
-		$studentArr = [$id, $firstName, $lastName, $Email, $phoneNumber];
+    	$students = student::find($studentId);
 
-    	return view('master', compact('studentArr'), compact($studentId)); 
+
+		// $id    		  = $studentId->id;
+  //   	$firstName    = $studentId->firstName;
+		// $lastName     = $studentId->lastName;
+		// $Email        = $studentId->Email;
+		// $phoneNumber  = $studentId->phoneNumber;
+
+		// $studentArr = [$id, $firstName, $lastName, $Email, $phoneNumber];
+
+    	return view('masterCompany', compact('students')); 
     }
 }
 

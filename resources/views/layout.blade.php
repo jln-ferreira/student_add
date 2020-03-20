@@ -6,21 +6,27 @@
 	<meta charset="UTF-8">
 	<title>Access Information</title>
 
-	<!-- INCLUDE BOOTSTRAP and JQUERY -->
+	<!-- INCLUDE BOOTSTRAP -->
 	@include('toolsUsed')
 
 
 </head>
 <body>
 	<!-- MY HEADER -->
-	@include('header')
+	<div class="jumbotron text-center">
+	  <h1>@yield('header') Registration</h1>
+	</div>
+
 
 
 	<!-- COMMING FROM MASTER -->
 	<!-- info_student (name, last name, email, phone number) -->
-	@yield('info_student')
+	@yield('info_Body')
 
 
 	
 </body>
 </html>
+
+	<!-- INCLUDE toastr and JQUERY -->
+	@include('toolsUsedJavascript')

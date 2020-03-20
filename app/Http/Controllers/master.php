@@ -27,8 +27,16 @@ class master extends Controller
     	]);
     	//save mySQL
     	$student->save();
+
+        //show toastr on top of the page (ALERT)
+        $notification = array(
+            'message' => 'Student added!',
+            'alert-type' => 'success'
+        );
+
+
         // go back to the same page '/' and insert a message Student added
-        return back()->with('message_AddStudent', 'Student added!');
+        return back()->with($notification);
     }
 
     //UPDATE STUDENTS
@@ -41,8 +49,14 @@ class master extends Controller
         $studentId->phoneNumber = $request->input('inputPhone');
         $studentId->save();
 
+        //show toastr on top of the page (ALERT)
+        $notification = array(
+            'message' => 'Student updated!',
+            'alert-type' => 'info'
+        );
+
         //$studentId->update($request->all());
-        return redirect('customers')->with('message_EditedStudent', 'Student edited!');
+        return redirect('customers')->with($notification);
     }
 
     //DELETE STUDENTS
@@ -50,7 +64,13 @@ class master extends Controller
 
         student::find($studentId)->delete();
 
-        return back();
+        //show toastr on top of the page (ALERT)
+        $notification = array(
+            'message' => 'Student deleted!',
+            'alert-type' => 'warning'
+        );
+
+        return back()->with($notification);
     }
 
 }
