@@ -37,7 +37,7 @@
 			        <td>{{ $company->createdAt }}</td>
 			        <td>
 			        	<a href="companies/{{$company->id}}/edit" class='btn btn-info'>edit</a>
-						<a href="companies/{{$company->id}}/DeleteStudent" class='btn btn-danger'>delete</a>
+						<a href="companies/{{$company->id}}/deleteCompany" class='btn btn-danger'>delete</a>
 			        </td>
 			    </tr>    
 			@endforeach

@@ -37,7 +37,7 @@ Route::post('/newCompany', 'controllerCompanyMaster@addCompany');
 //UPDATE COMPANY
 Route::patch('/companies/{companyId}/updateCompany', 'controllerCompanyMaster@updateCompany');
 //DELETE COMPANY
-Route::get('/companies/{companyId}/dseleteCompany', 'master@deleteStudent');
+Route::get('/companies/{companyId}/deleteCompany', 'controllerCompanyMaster@deleteCompany');
 
 
 //-----------------------show STUDENTS----------------------

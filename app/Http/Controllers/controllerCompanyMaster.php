@@ -59,13 +59,13 @@ class controllerCompanyMaster extends Controller
     }
 
     //DELETE STUDENTS
-    public function deleteStudent($studentId){
+    public function deleteCompany($companyId){
 
-        student::find($studentId)->delete();
+        Company::find($companyId)->delete();
 
         //show toastr on top of the page (ALERT)
         $notification = array(
-            'message' => 'Student deleted!',
+            'message' => 'Company deleted!',
             'alert-type' => 'warning'
         );
 
