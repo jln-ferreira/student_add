@@ -41,6 +41,11 @@
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 
+    <!-- BUTTON TO CHANGE pages -->
+    <div class=".col-lg-12" style="text-align: right;">
+        <a href="inputCompany" class="btn btn-info">Change company</a>
+    </div>
+
 	<!-- EDIT FORM -> STUDENTS -->
     @else
     <form method="POST" action="UpdateStudent" > <!-- gonna send to other page with all information. see on Route::post -->
@@ -64,6 +69,7 @@
         	<input type="Number" class="form-control" id="inputPhone" name="inputPhone" placeholder="Enter Phone number" value="{{$students->phoneNumber}}"  required>
     	</div>
         <button type="edit" class="btn btn-info">edit</button>
+        <a href="../../" class="btn btn-danger">back</a>
     </form>
 	@endif
   </div>

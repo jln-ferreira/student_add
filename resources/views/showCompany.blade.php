@@ -8,6 +8,12 @@
 @section('info_Body')
 <div class="container">
 	<div class=".col-lg-6">
+
+		<!-- button for goback to input Company -->
+	  	<div class=".col-lg-12" style="text-align: right; margin-bottom: 10px;">
+	  		<a href="inputCompany" class="btn btn-info">Back Input</a>
+	  	</div>
+
 		<table class="table">
 		  	<thead>
 			  	<tr>

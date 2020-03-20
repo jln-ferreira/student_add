@@ -12,4 +12,16 @@ class student extends Model
 	public $timestamps = false;
 	//this is what is fillable`2
     protected $fillable = ['firstName', 'lastName', 'Email', 'phoneNumber'];
+
+
+    // RELATIONSHIP
+    public function companies()
+    {
+    	//many Customer/Student has one Company
+    	//Gonna seach the company_id in a companies TB
+        return $this->belongsTo(Company::class, 'company_id');
+    }
+
 }
+
+

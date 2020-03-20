@@ -41,6 +41,11 @@
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 
+        <!-- BUTTON TO CHANGE pages -->
+    <div class=".col-lg-12" style="text-align: right;">
+        <a href="./" class="btn btn-info">Change student</a>
+    </div>
+
 	<!-- EDIT FORM -> STUDENTS -->
     @else
     <form method="POST" action="updateCompany" > <!-- gonna send to other page with all information. see on Route::post -->
@@ -64,6 +69,7 @@
         	<input type="text" class="form-control" id="inputSector" name="inputSector" placeholder="Enter Sector" value="{{$companies->sector}}"  required>
     	</div>
         <button type="edit" class="btn btn-info">edit</button>
+        <a href=".././" class="btn btn-danger">back</a>
     </form>
 	@endif
   </div>

@@ -39,15 +39,15 @@ class controllerListCustomers extends Controller
     	$students = student::find($studentId);
 
 
-		// $id    		  = $studentId->id;
-  //   	$firstName    = $studentId->firstName;
+		// $id    		 = $studentId->id;
+        //$firstName     = $studentId->firstName;
 		// $lastName     = $studentId->lastName;
 		// $Email        = $studentId->Email;
 		// $phoneNumber  = $studentId->phoneNumber;
 
 		// $studentArr = [$id, $firstName, $lastName, $Email, $phoneNumber];
 
-    	return view('masterCompany', compact('students')); 
+        return view('master', compact('students')); 
     }
 }
 
