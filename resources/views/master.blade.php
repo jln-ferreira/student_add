@@ -20,7 +20,7 @@
   		<a href="customers" class="btn btn-success">View Students</a>
   	</div>
     <div class=".col-lg-12" style="text-align: right; margin-top: 10px; ">
-        <a href="./" class="btn btn-warning">Relationship</a>
+        <a href="relationship" class="btn btn-warning">Relationship</a>
     </div>
 
     <form method="POST" action="newStudent" > <!-- gonna send to other page with all information. see on Route::post -->
@@ -41,6 +41,14 @@
         	<label for="inputPhone">Phone Number</label>
         	<input type="Number" class="form-control" id="inputPhone" name="inputPhone" placeholder="Enter Phone number"  required>
     	</div>
+        <div class="form-group">
+            <label for="inputCompany">Company</label>
+            <select id="inputCompany" name="inputCompany">
+                @foreach ($companies as $company)
+                  <option value="{{$company->id}}">{{$company->name}}</option>
+                @endforeach
+            </select>
+        </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 
@@ -71,6 +79,22 @@
         	<label for="inputPhone">Phone Number</label>
         	<input type="Number" class="form-control" id="inputPhone" name="inputPhone" placeholder="Enter Phone number" value="{{$students->phoneNumber}}"  required>
     	</div>
+
+
+        <div class="form-group">
+            <label for="inputCompany">Company</label>
+            <select id="inputCompany" name="inputCompany">
+                @foreach ($companies as $company)
+                    @if(isset($students->companies) && $company->id == $students->companies->id)
+                        <option value="{{$company->id}}" selected>{{$company->name}}</option>
+                    @else   
+                        <option value="{{$company->id}}">{{$company->name}}</option>
+                    @endif
+                @endforeach
+            </select>
+        </div>
+
+
         <button type="edit" class="btn btn-info">edit</button>
         <a href="../../" class="btn btn-danger">back</a>
     </form>

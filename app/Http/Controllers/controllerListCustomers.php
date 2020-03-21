@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\student;
+use App\Company;
 
 // use DB;
 
@@ -37,7 +38,7 @@ class controllerListCustomers extends Controller
 
 
     	$students = student::find($studentId);
-
+        $companies = Company::all();
 
 		// $id    		 = $studentId->id;
         //$firstName     = $studentId->firstName;
@@ -47,7 +48,7 @@ class controllerListCustomers extends Controller
 
 		// $studentArr = [$id, $firstName, $lastName, $Email, $phoneNumber];
 
-        return view('master', compact('students')); 
+        return view('master', compact('students', 'companies')); 
     }
 }
 

@@ -10,6 +10,7 @@ class controllerCompanyMaster extends Controller
 
 	//access view to a company input
 	public function index(){
+
 		return view('masterCompany');
 	}
 

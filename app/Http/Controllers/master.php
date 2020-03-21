@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\student;
+use App\Company;
 use Illuminate\Http\Request;
 
 class master extends Controller
@@ -10,7 +11,10 @@ class master extends Controller
 	//CONTROLLER OF MY MAIN - INDEX
 	//WHERE ILL FIND INPUT VALUES
     public function index(){
-    	return view('master');
+
+        $companies = Company::all();
+
+    	return view('master', compact('companies'));
     }
 
     //POST for add students
@@ -22,7 +26,8 @@ class master extends Controller
 			'firstName'   => $request->get('inputFirstName'),
 			'lastName'	  => $request->get('inputLastname'),
 			'Email'		  => $request->get('inputEmail'),
-			'phoneNumber' => $request->get('inputPhone')
+			'phoneNumber' => $request->get('inputPhone'),
+            'company_id'  => $request->get('inputCompany')
 			//'createdAt'	  => $request->get();
     	]);
     	//save mySQL
@@ -47,6 +52,7 @@ class master extends Controller
         $studentId->lastName = $request->input('inputLastname');
         $studentId->Email = $request->input('inputEmail');
         $studentId->phoneNumber = $request->input('inputPhone');
+        $studentId->company_id = $request->input('inputCompany');
         $studentId->save();
 
         //show toastr on top of the page (ALERT)
