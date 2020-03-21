@@ -58,6 +58,10 @@ Route::get('/companies', 'controllerListCompanies@newCompany');
 Route::get('/companies/{companyId}/edit', 'controllerListCompanies@editCompany');
 
 
+//----------------------RELATIONSHIP---------------------------
+Route::get('/relationship', 'controllerCompanyMaster@relationship');
+
+
 
 //--------------------------LEARNING NOW HERE-----------------------------
 //Here is, from our page, go to USER page

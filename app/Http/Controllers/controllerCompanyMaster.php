@@ -71,4 +71,17 @@ class controllerCompanyMaster extends Controller
 
         return back()->with($notification);
     }
+
+
+
+
+    //show all relationship COMPANIES X STUDENT/CUSTOMERS
+    public function relationship(){
+
+        // fetch all information inside company DB
+        $companies = Company::all();
+
+
+        return view('relationshipCompany', compact('companies'));
+    }
 }

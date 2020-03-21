@@ -19,6 +19,9 @@
   	<div class=".col-lg-12" style="text-align: right;">
   		<a href="companies" class="btn btn-success">View Companies</a>
   	</div>
+    <div class=".col-lg-12" style="text-align: right; margin-top: 10px; ">
+        <a href="./" class="btn btn-warning">Relationship</a>
+    </div>
 
     <form method="POST" action="newCompany" > <!-- gonna send to other page with all information. see on Route::post -->
     	@csrf
